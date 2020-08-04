@@ -6,6 +6,12 @@ namespace InfnetBanking
     {
         static void Main(string[] args)
         {
+            Aula20200729();
+
+        }
+
+        private static void Aula20200729()
+        {
             // 1. Instanciar objeto do tipo ContaBancaria
             ContaBancaria contaBancaria = new ContaBancaria(); // Construtor padrão da classe
 
@@ -41,7 +47,6 @@ namespace InfnetBanking
             contaBancaria.Transferir(100, contaBancaria2);
             Console.WriteLine($"Saldo da primeira conta: {contaBancaria.Saldo}");
             Console.WriteLine($"Saldo da segunda conta: {contaBancaria2.Saldo}");
-
         }
     }
 }

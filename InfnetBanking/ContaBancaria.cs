@@ -47,7 +47,7 @@ namespace InfnetBanking
 
         public void Sacar(double valor)
         {
-            if (saldo >= valor)
+            if (saldo >= valor && valor >= 0)
             {
                 saldo -= valor;
                 Console.WriteLine($"Saque finalizado. O novo saldo é de R${saldo}.");
