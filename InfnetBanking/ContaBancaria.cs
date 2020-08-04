@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace InfnetBanking
 {
@@ -9,6 +7,7 @@ namespace InfnetBanking
         // Classes possuem membros. 
         // Membros podem ser campos/propriedades ou métodos.
         private double saldo; // campo privado: apenas a própria classe consegue acessar.
+        private int agencia;
 
         // Propriedade (C#).
         // Propriedades serão, em geral, públicas.
@@ -25,9 +24,23 @@ namespace InfnetBanking
 
         // Autopropriedade (C# 3.0 ou superior)
         // Padrão da linguagem: nomes de campos com minúscula; nomes de propriedades com maiúscula
-        public int Agencia { get; set; }
+        //public int Agencia { get; set; }
+
+        public int Agencia
+        {
+            get => agencia;
+            set
+            {
+                if (value < 1 || value > 9999)
+                {
+                    throw new ArgumentOutOfRangeException("O número da agência deve ser entre 1 e 9999.");
+                }
+                agencia = value;
+            }
+        }
+
         public int Numero { get; set; }
-        public string Titular { get; set; }
+        public PessoaFisica Titular { get; set; }
 
         // E para escrever o saldo?
         // Vamos utilizar métodos que contenham as regras de negócio para manipular o saldo.
