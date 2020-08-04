@@ -6,11 +6,11 @@ namespace InfnetBanking
 {
     public class ContaBancaria
     {
-        // Classes possuem membros.
+        // Classes possuem membros. 
         // Membros podem ser campos/propriedades ou métodos.
         private double saldo; // campo privado: apenas a própria classe consegue acessar.
 
-        // Propriedade (C#)
+        // Propriedade (C#).
         // Propriedades serão, em geral, públicas.
         public double Saldo
         {
