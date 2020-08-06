@@ -21,8 +21,8 @@ namespace InfnetBanking
                 DataNascimento = new DateTime(1930, 9, 1)
 
             };
-
-            Console.WriteLine($"Titular\n{contaBancaria.Titular.ToString()}");
+            Console.WriteLine(contaBancaria.ToString());
+            //Console.WriteLine($"Titular\n{contaBancaria.Titular.ToString()}");
         }
 
         private static void Aula20200729()

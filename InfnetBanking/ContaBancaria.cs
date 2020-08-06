@@ -71,13 +71,18 @@ namespace InfnetBanking
             }
         }
 
-        public void Transferir(double valor, ContaBancaria conta)
+        public virtual void Transferir(double valor, ContaBancaria conta)
         {
             if (valor >= 0 && valor <= saldo)
             {
                 Sacar(valor);
                 conta.Depositar(valor);
             }
+        }
+
+        public override string ToString()
+        {
+            return $"Agência: {Agencia}\nConta: {Numero}\nTitular: {Titular.ToString()}\nSaldo: R${Saldo}";
         }
     }
 }
