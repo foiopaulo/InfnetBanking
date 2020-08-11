@@ -4,38 +4,26 @@ using System.Text;
 
 namespace InfnetBanking
 {
-    public class PessoaFisica
+    public class PessoaFisica : Pessoa
     {
-        private string cpf;
-
-        public string Cpf
-        {
-            get => cpf;
-
-            set
-            {
-                if (ValidarCpf(value))
-                {
-                    cpf = value;
-                }
-            }
-        }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
-        public DateTime DataNascimento { get; set; }
-        public Endereco Endereco {get; set;}
 
 
-        public bool ValidarCpf(string cpf)
+        private bool ValidarCpf(string cpf)
         {
-
-            // TODO: Programar regra de validação de CPF;
+            //TODO: Programar regra de validação de CPF;
             return true;
         }
 
         public override string ToString()
         {
-            return $"CPF: {Cpf}\nNome: {Nome} {Sobrenome}.";
+            return $"Nome: {Nome} {Sobrenome}.";
+        }
+
+        public override bool ValidarCadastroPessoa(string value)
+        {
+            return true;
         }
     }
 }

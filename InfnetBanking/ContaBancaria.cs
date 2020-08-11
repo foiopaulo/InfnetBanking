@@ -40,7 +40,7 @@ namespace InfnetBanking
         }
 
         public int Numero { get; set; }
-        public PessoaFisica Titular { get; set; }
+        public Pessoa Titular { get; set; }
 
         // E para escrever o saldo?
         // Vamos utilizar métodos que contenham as regras de negócio para manipular o saldo.
