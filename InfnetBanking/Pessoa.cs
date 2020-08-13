@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace InfnetBanking
 {
@@ -19,7 +20,7 @@ namespace InfnetBanking
             }
         }
 
-        public string Endereco { get; set; }
+        public List<Endereco> Enderecos { get; set; }
         public DateTime DataNascimento { get; set; }
 
         public abstract bool ValidarCadastroPessoa(string value);

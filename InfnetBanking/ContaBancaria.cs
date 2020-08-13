@@ -24,7 +24,7 @@ namespace InfnetBanking
 
         /* A partir do momento que se explicita um construtor diferente do construtor padrão (sem parâmetros),
          * este deixa de existir. Para que ele seja novamente reconhecido, torna-se necessário explicitá-lo */
-        public ContaBancaria() { }
+        //public ContaBancaria() { }
 
 
         // Classes possuem membros. 
@@ -106,6 +106,7 @@ namespace InfnetBanking
         public override string ToString()
         {
             return $"Agência: {Agencia}\nConta: {Numero}\nTitular: {Titular.ToString()}\nSaldo: R${Saldo}";
+
         }
     }
 }
